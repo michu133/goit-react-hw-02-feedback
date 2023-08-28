@@ -35,7 +35,10 @@ export default class App extends Component {
         <Section
           title="Please leave feedback"
           children={
-            <FeedbackOptions onLeaveFeedback={this.addStats}></FeedbackOptions>
+            <FeedbackOptions
+              options={Object.keys(this.state)}
+              onLeaveFeedback={this.addStats}
+            ></FeedbackOptions>
           }
         ></Section>
         <Section
